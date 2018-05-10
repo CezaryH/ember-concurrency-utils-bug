@@ -1,8 +1,8 @@
 {
-  "name": "test-babili",
+  "name": "ember-power-select-error",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for test-babili goes here",
+  "description": "ember-power-select-error",
   "license": "MIT",
   "author": "",
   "directories": {
@@ -14,7 +14,8 @@
     "build": "ember build",
     "lint:js": "eslint ./*.js app config lib server tests",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "deploy": "ember build && ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -22,15 +23,17 @@
     "ember-cli": "~2.18.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
+    "ember-cli-babili": "^0.2.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
+    "ember-cli-github-pages": "^0.2.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-uglify": "^2.0.0",
+    "ember-concurrency": "^0.8.19",
     "ember-data": "~2.18.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
